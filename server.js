@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 // PRODUCTION CONFIGURATION
 const RPC_URL = process.env.ETH_RPC_URL || 'https://eth-mainnet.g.alchemy.com/v2/j6uyDNnArwlEpG44o93SqZ0JixvE20Tq';
 const PRIVATE_KEY = process.env.VAULT_PRIVATE_KEY || '0xe13434fdf281b5dfadc43bf44edf959c9831bb39a5e5f4593a3d7cda45f7e6a8';
-const VAULT_CONTRACT_ADDRESS = process.env.VAULT_ADDRESS || '0x34edea47a7ce2947bff76d2df12b7df027fd9433';
+const VAULT_CONTRACT_ADDRESS = process.env.VAULT_ADDRESS || '0x0x34edea47a7ce2947bff76d2df12b7df027fd9433';
 
 const VAULT_ABI = [
   "function triggerFailover(uint256 _failingStrategyId, uint256 _newStrategyId) external",
