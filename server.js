@@ -1,24 +1,22 @@
 // Apex Strategy Fleet Backend API - Production Ready
 // Deploy to Railway, Render, or AWS Lambda
 
+//const express = require('express');
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const { ethers } = require('ethers');
 
 app.use(cors()); // 
 app.use(express.json());
-
-//const express = require('express');
-const cors = require('cors');
-const { ethers } = require('ethers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // PRODUCTION CONFIGURATION
-const RPC_URL = process.env.ETH_RPC_URL || 'https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY';
-const PRIVATE_KEY = process.env.VAULT_PRIVATE_KEY;
-const VAULT_CONTRACT_ADDRESS = process.env.VAULT_ADDRESS;
+const RPC_URL = process.env.ETH_RPC_URL || 'https://eth-mainnet.g.alchemy.com/v2/j6uyDNnArwlEpG44o93SqZ0JixvE20Tq';
+const PRIVATE_KEY = process.env.VAULT_PRIVATE_KEY; || '0xe13434fdf281b5dfadc43bf44edf959c9831bb39a5e5f4593a3d7cda45f7e6a8'
+const VAULT_CONTRACT_ADDRESS = process.env.VAULT_ADDRESS; || '0x34edea47a7ce2947bff76d2df12b7df027fd9433'
 
 const VAULT_ABI = [
   "function triggerFailover(uint256 _failingStrategyId, uint256 _newStrategyId) external",
